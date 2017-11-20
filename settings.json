@@ -1,0 +1,8 @@
+{
+    "directoryPath": "C:\\Test\\Site Backups\\",
+    "resultFilePath": "C:\\Test\\Site Backups\\result.txt",
+    "folderNames": ["Arnot","Camden"],
+    "Arnot": ["^Latest_Backup_[0-9]{8}.txt$","^Latest_Backups_[0-9]{8}.txt$"],
+    "Camden": ["^Latest_Backup_[0-9]{8}.txt$","^Latest_Backups_[0-9]{8}.txt$"]
+    
+}
