@@ -1,6 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var fs = require('fs');
+var tableify = require('tableify');
 
 var sitesArray = []
 // var jsonControl = require('jsonfile');
@@ -61,9 +62,10 @@ router.get('/API/backup/', function (req, res) {
     console.log('Newly Created Site Array.')
     console.log(sitesArray)
 
-    //JSON.parse()
+    var json = JSON.stringify(sitesArray)
+    var html = tableify(sitesArray)
 
-    return res.status(200).send(JSON.stringify(sitesArray))
+    return res.status(200).send(html)
 })
 
 function readFile () {

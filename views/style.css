@@ -1,0 +1,24 @@
+.navbar {
+    background-color: rgb(31, 31, 31);
+    color: whitesmoke;
+    font-size: 22px;
+    padding: 5px;
+}
+
+body {
+    margin: 0px 0px;
+    font: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#btnGetJSON {
+    background-color: #5cb85c;
+    float: right;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: whitesmoke;
+    height: 23px;
+}
+
+.container {
+    text-align: center;
+}
