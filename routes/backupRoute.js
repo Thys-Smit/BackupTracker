@@ -5,7 +5,6 @@ var tableify = require('tableify')
 var moment = require('moment')
 
 var sitesArray = []
-// var jsonControl = require('jsonfile');
 var settingsJSON = JSON.parse(fs.readFileSync('settings.json', 'utf8'));
 var dirPath = settingsJSON.directoryPath;
 var folderName = settingsJSON.folderNames;
@@ -14,7 +13,6 @@ var dates = [];
 var maxDate = [];
 var header = [];
 
-// Get all the users.
 router.get('/API/backup/', function (req, res) {
     var html = readDirectory()
     return res.status(200).send(html)
@@ -28,7 +26,6 @@ function readDirectory () {
         siteData.Site = dirName
 
         fileRegex = eval("settingsJSON." + dirName);
-        fs.appendFileSync(settingsJSON.resultFilePath,"Site : " + fileRegex)
 
         var path = dirPath + dirName + "\\";
         fs.readdirSync(path).forEach(function(fileName)
