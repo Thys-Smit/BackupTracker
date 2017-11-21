@@ -1,7 +1,8 @@
 var express = require('express')
 var router = express.Router()
-var fs = require('fs');
-var tableify = require('tableify');
+var fs = require('fs')
+var tableify = require('tableify')
+var moment = require('moment')
 
 var sitesArray = []
 // var jsonControl = require('jsonfile');
@@ -14,62 +15,50 @@ var maxDate = [];
 var header = [];
 
 // Get all the users.
-router.get('/API/backup/', function (req, res) {    
-    fs.writeFileSync(settingsJSON.resultFilePath, "");
-    
+router.get('/API/backup/', function (req, res) {
+    var html = readDirectory()
+    return res.status(200).send(html)
+})
+
+function readDirectory () {
     folderName.forEach(function(dirName)
     {
         var siteData = {}
-        siteData.regexList = []
-        siteData.Name = dirName
+        siteData.Result = []
+        siteData.Site = dirName
 
         fileRegex = eval("settingsJSON." + dirName);
         fs.appendFileSync(settingsJSON.resultFilePath,"Site : " + fileRegex)
 
         var path = dirPath + dirName + "\\";
-        fs.readdir(path, function(err, filenames)
+        fs.readdirSync(path).forEach(function(fileName)
         {
-            if (err)
-            {
-                onError(err);
-                return;
-            }
-
             fileRegex.forEach(function(fileReg)
             {
-                siteData.regexList.push({regex: fileReg, date: ''})
-
-                filenames.forEach(function(filename)
-                { 
-                    if(filename.match(fileReg) !== null) 
-                    {
-                        stats = fs.lstatSync(path + filename);
-                        dates.push(stats.birthtime);
-                    }
-                });
-
-                var maxDate = new Date(Math.max.apply(null,dates))
-                siteData.regexList[siteData.regexList.length - 1].date = maxDate
-          });          
-
-          sitesArray.push(siteData)       
-
-          fs.appendFileSync(settingsJSON.resultFilePath,"\r\n" + folderName[folderName.indexOf(dirName)] + " : " + maxDate);
+                if (fileName.match(fileReg) !== null)
+                {
+                    stats = fs.lstatSync(path + fileName);
+                    dates.push(stats.birthtime)
+                }
+                
+                if (dates.length > 0) {
+                    var regexVal = {regex: '', dateTest: ''}
+                    regexVal.regex = fileReg                    
+                    var maxDate = new Date(Math.max.apply(null, dates))
+                    regexVal.dateTest = moment(maxDate).format('YYYY MM DD')
+                    siteData.Result.push(regexVal)
+                    dates = []
+                }
+          });
         });
-        
+
+        sitesArray.push(siteData)
     });
 
-    console.log('Newly Created Site Array.')
-    console.log(sitesArray)
-
-    var json = JSON.stringify(sitesArray)
     var html = tableify(sitesArray)
+    sitesArray = [];
 
-    return res.status(200).send(html)
-})
-
-function readFile () {
-
+    return html
 }
 
 module.exports = router

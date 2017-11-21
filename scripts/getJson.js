@@ -1,13 +1,13 @@
 
 function getJSON() {
     var url = '/API/backup/'
-    var xmlHttp = new XMLHttpRequest();
+    var xmlHttp = new XMLHttpRequest(); 
     
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
         {
-            var response =  xmlHttp.responseText
-            console.log(response)
+            document.getElementById("tableContainer").innerHTML = xmlHttp.responseText;
+            console.log(xmlHttp.responseText)
         }
             
     }

@@ -1,13 +1,13 @@
 .navbar {
     background-color: rgb(31, 31, 31);
     color: whitesmoke;
-    font-size: 22px;
-    padding: 5px;
+    font-size: 25px;
+    padding: 10px;
 }
 
 body {
     margin: 0px 0px;
-    font: "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: "Lucida Grande", Helvetica, Arial, sans-serif;    
 }
 
 #btnGetJSON {
@@ -16,9 +16,39 @@ body {
     border: 1px solid transparent;
     border-radius: 4px;
     color: whitesmoke;
-    height: 23px;
+    height: 26px;
 }
 
 .container {
     text-align: center;
 }
+
+#tableContainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table {
+    border: 1px solid;
+    width: 100%;
+}
+
+th {
+    border: 1px solid;
+    width: 100%;
+}
+
+td {
+    border: 1px solid;
+    width: 100%;
+}
+
+tr {
+    border: 1px solid;
+    width: 100%;
+}
+
+

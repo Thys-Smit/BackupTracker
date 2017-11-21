@@ -1,7 +1,23 @@
 {
-    "directoryPath": "E:\\Test\\Site Backups\\",
-    "resultFilePath": "E:\\Test\\Site Backups\\result.txt",
+    "directoryPath": "C:\\Test\\Site Backups\\",
+    "resultFilePath": "C:\\Test\\Site Backups\\result.txt",
     "folderNames": ["Arnot","Camden"],
-    "Arnot": ["^Latest_Backup_[0-9]{8}.txt$","^Latest_Backups_[0-9]{8}.txt$"],
-    "Camden": ["^Latest_Backup_[0-9]{8}.txt$","^Latest_Backups_[0-9]{8}.txt$"] 
+    "Arnot1": ["^Latest_Backup_[0-9]{8}.txt$","^Latest_Backups_[0-9]{8}.txt$"],
+    "Camden1": ["^Latest_Backup_[0-9]{8}.txt$","^Latest_Backups_[0-9]{8}.txt$"] ,
+
+    "Arnot": ["^Carab_Security_[0-9]{8}.7z$","^Arnot_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Arnot_Ducting_Module_[0-9]{8}.7z$","^Arnot_Milling_Module_[0-9]{8}.7z$","^Arnot_Milling_Module_Service_[0-9]{8}.7z$","^Mills_[0-9]{8}$,Arnot_Pipework_[0-9]{8}.7z$","^Arnot_Pressure_Parts_[0-9]{8}.7z$","^Arnot_Thick_Wall_Components_[0-9]{8}.7z$"],
+    "Camden": ["^Carab_Security_[0-9]{8}.7z$","^Camden_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Camden_Pipework_[0-9]{8}.7z$","^Camden_[0-9]{8}.7z$","^Camden_Thick_Wall_Components_[0-9]{8}$]"],
+    "Duvha": ["^Carab_Security_[0-9]{8}.7z$","^Duvha_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Duvha_HP_Pipework_[0-9]{8}.7z$","^Duvha_[0-9]{8}.7z$","^Duvha_Thick_Wall_Components_[0-9]{8}.7z$"],
+    "Grootvlei": ["^Carab_Security_[0-9]{8}.7z$","^Grootvlei_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Grootvlei_Unit_1__6_Pipework_[0-9]{8}.7z$","^Grootvlei_Unit_2_3__4_Pipework_[0-9]{8}.7z$","^Grootvlei_Unit_5_Pipework_[0-9]{8}.7z$","^Grootvlei_Unit_1__6_[0-9]{8}.7z$","^Grootvlei_Unit_2_3__4_[0-9]{8}.7z$","^Grootvlei_Unit_5_[0-9]{8}.7z$","^Grootvlei_Unit_1__6_Thick_Wall_Components_[0-9]{8}.7z$","^Grootvlei_Unit_2_3__4_Thick_Wall_Components_[0-9]{8}.7z$","^Grootvlei_Unit_5_Thick_Wall_Components_[0-9]{8}.7z$"],
+    "Hendrina": ["^Carab_Security_[0-9]{8}.7z$","^Hendrina_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Hendrina_Type_C_[0-9]{8}.7z$","^Hendrina_Type_C_Thick_Wall_Components_[0-9]{8}.7z$","^Hendrina_Type_C_Pipework_[0-9]{8}.7z$","^Hendrina_Type_B_[0-9]{8}.7z$","^Hendrina_Type_B_Thick_Wall_Components_[0-9]{8}.7z$","^Hendrina_Type_B_Pipework_[0-9]{8}.7z$","^Hendrina_Type_A_[0-9]{8}.7z$","^Hendrina_Type_A_Thick_Wall_Components_[0-9]{8}.7z$","^Hendrina_Type_A_Pipework_[0-9]{8}.7z$"],
+    "Kendal": ["^Carab_Security_[0-9]{8}.7z$","^Kendal_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Kendal_Pipework_[0-9]{8}.7z$","^Kendal_Pressure_Parts_[0-9]{8}.7z$","^Kendal_Thick_Wall_Components_[0-9]{8}.7z$"],
+    "Komati": ["^Carab_Security_[0-9]{8}.7z$","^Komati_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Komati_HP_Pipework_Unit_1_-_3_[0-9]{8}.7z$","^Komati_HP_Pipework_Unit_4__5_[0-9]{8}.7z$","^Komati_HP_Pipework_Unit_6_-_9_[0-9]{8}.7z$","^Komati_Unit_1_-_3_[0-9]{8}.7z$","^Komati_Unit_4__5_[0-9]{8}.7z$","^Komati_Unit_6_-_9_[0-9]{8}.7z$","^Komati_Thick_Wall_Components_Unit_1_-_3_[0-9]{8}.7z$","^Komati_Thick_Wall_Components_Unit_4__5_[0-9]{8}.7z$","^Komati_Thick_Wall_Components_Unit_6_-_9_[0-9]{8}.7z$"],
+    "Kriel": ["^Carab_Security_[0-9]{8}.7z$","^Kriel_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Kriel_Pipework_[0-9]{8}.7z$","^Kriel_Pressure_Parts_[0-9]{8}.7z$","^Kriel_Thick_Wall_Components_[0-9]{8}.7z$","^New_Kriel_[0-9]{8}$]"],
+    "Lethabo": ["^Carab_Security_[0-9]{8}.7z$","^Lethabo_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Lethabo_Pipework_[0-9]{8}.7z$","^Lethabo_Pressure_Parts_[0-9]{8}.7z$","^Lethabo_Thick_Wall_Components_[0-9]{8}$]"],
+    "Majuba": ["^Carab_Security_[0-9]{8}.7z$","^Majuba_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Majuba_HP_Pipework_[0-9]{8}.7z$","^Majuba_Pressure_Parts_[0-9]{8}.7z$","^Majuba_Thick_Wall_Components_[0-9]{8}.7z$"],
+    "Matimba": ["^Carab_Security_[0-9]{8}.7z$","^Matimba_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Matimba_HP_Pipework_[0-9]{8}.7z$","^Matimba_Pressure_Parts_[0-9]{8}.7z$","^Matimba_Thick_Wall_Components_[0-9]{8}.7z$"],
+    "Matla": ["^Carab_Security_[0-9]{8}.7z$","^Matla_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Matla_HP_Pipework_[0-9]{8}.7z$","^Matla_Pressure_Parts_[0-9]{8}.7z$","^Matla_Thick_Wall_Components_[0-9]{8}.7z$","^Matla_New_[0-9]{8}.7z$"],
+    "Medupi": ["^Carab_Security_[0-9]{8}.7z$","^Medupi_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Medupi_HP_Pipework_[0-9]{8}.7z$","^Medupi_Pressure_Parts_[0-9]{8}.7z$","^Medupi_Thick_Wall_Components_[0-9]{8}.7z$","^Medupi_CWDB_[0-9]{8}.7z$"],
+    "Tutuka": ["^Carab_Security_[0-9]{8}.7z$","^Tutuka_MegaDB_[0-9]{8}.7z$","^Carab_Master_[0-9]{8}.7z$","^Tutuka_HP_Pipework_[0-9]{8}.7z$","^Tutuka_[0-9]{8}.7z$","Tutuka_Thick_Wall_Components_[0-9]{8}.7z$","^Tutuka_Inspection_[0-9]{8}.7z$"]
+
 }

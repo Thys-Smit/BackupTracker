@@ -1,9 +1,8 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var fs = require('fs')
-// var config = require('./config.js')
 
-var pageRouter = require('./routes/pageRouter.js')
+var pageRouter = require('./routes/pageRoute.js')
 var backupRouter = require('./routes/backupRoute.js')
 
 var app = express()
