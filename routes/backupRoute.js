@@ -12,6 +12,7 @@ var fileRegex = [];
 var dates = [];
 var maxDate = [];
 var header = [];
+var currDate = null;
 
 router.get('/API/backup/', function (req, res) {
     var html = readDirectory()
@@ -27,27 +28,38 @@ function readDirectory () {
 
         fileRegex = eval("settingsJSON." + dirName);
 
-        var path = dirPath + dirName + "\\";
-        fs.readdirSync(path).forEach(function(fileName)
+        var regexVal = {Regex: '', Date: ''}
+
+        fileRegex.forEach(function(fileReg)
         {
-            fileRegex.forEach(function(fileReg)
+
+            var path = dirPath + dirName + "\\";
+            fs.readdirSync(path).forEach(function(fileName)
             {
+            
                 if (fileName.match(fileReg) !== null)
                 {
                     stats = fs.lstatSync(path + fileName);
-                    dates.push(stats.birthtime)
+                    if (stats.birthtime > currDate || currDate === null)
+                    {
+                        regexVal.Regex = fileReg                    
+                        regexVal.Date = moment(stats.birthtime).format('YYYY MM DD')
+                        currDate = stats.birthtime
+                    }   
+                    
                 }
-                
-                if (dates.length > 0) {
-                    var regexVal = {regex: '', dateTest: ''}
-                    regexVal.regex = fileReg                    
-                    var maxDate = new Date(Math.max.apply(null, dates))
-                    regexVal.dateTest = moment(maxDate).format('YYYY MM DD')
-                    siteData.Result.push(regexVal)
-                    dates = []
-                }
-          });
+
+              
+            });
+            if (regexVal.Date.length > 0){
+                siteData.Result.push(regexVal)
+                dates = []
+                currDate = null;
+                regexVal = {Regex: '', Date: ''}
+            }
         });
+          
+        
 
         sitesArray.push(siteData)
     });
