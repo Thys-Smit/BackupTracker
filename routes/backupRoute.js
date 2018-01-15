@@ -25,7 +25,7 @@ function readDirectory () {
         var siteData = {}
         siteData.Result = []
         siteData.Site = dirName
-
+        
         fileRegex = eval("settingsJSON." + dirName);
 
         var regexVal = {Regex: '', Date: ''}
@@ -43,7 +43,7 @@ function readDirectory () {
                     if (stats.birthtime > currDate || currDate === null)
                     {
                         regexVal.Regex = fileReg                    
-                        regexVal.Date = moment(stats.birthtime).format('YYYY MM DD')
+                        regexVal.Date = moment(stats.birthtime).format('YYYY/MM/DD')
                         currDate = stats.birthtime
                     }   
                     
